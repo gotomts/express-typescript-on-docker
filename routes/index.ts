@@ -1,4 +1,6 @@
-import { Router, Request, Response } from 'express';
+import { Router } from 'express';
+
+import IndexController from '../controllers/IndexController';
 
 const router = Router();
 
@@ -13,6 +15,6 @@ const router = Router();
  *      200:
  *        description: タイトル
  */
-router.get('/', (req: Request, res: Response) => res.render('index', { title: 'Express' }));
+router.get('/', IndexController);
 
 export default router;
